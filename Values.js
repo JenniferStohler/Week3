@@ -1,6 +1,6 @@
 export default class Value {
   constructor(data){
-    console.log(5)
+    console.log()
     this.title = data.title
   }
 
