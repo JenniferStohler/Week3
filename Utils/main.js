@@ -1,7 +1,7 @@
-import VendingController from "./Controller/VendingController.js"
+import VendingController from "../Controller/VendingController.js"
 
 class App {
-  vendingController = new this.vendingController()
+  vendingController = new VendingController()
 
 }
 

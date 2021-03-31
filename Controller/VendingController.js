@@ -1,5 +1,5 @@
-import { ProxyState } from '..Models/AppState.js'
-import { VendingService } from '../Models/VendingService/VendingService.js'
+//import { ProxyState } from '..Models/AppState.js'
+import { vendingService } from '../VendingService/VendingService.js'
 
 
 function _draw() {
@@ -10,33 +10,36 @@ function _draw() {
   
   document.getElementById('snacks').innerHTML = `
   <div id="snacks" class="col-md-4">
-    <button id="chips" onclick="chips()">Buy Chips</button>
+    <button id="chips" onclick="app.vendingController.chips()">Buy Chips</button>
     <button id="candy" onclick="candy()">Buy Candy</button>
     <button id="drinks" onclick="drinks()">Buy Drinks</button>
-    </div>
+
+    ${template}
+  </div>
   `
 }
 
 export default class VendingController {
   constructor() {
    
-    ProxyState.on('snacks', _draw)
+    //ProxyState.on('snacks', _draw)
     
-     _draw()
+    // _draw()
   }
 
 
 
   chips(){
-    VendingService.chips()
+    console.log('buying chips')
+    vendingService.chips()
   }
 
   candy(){
-    VendingService.candy()
+    vendingService.candy()
   }
 
   drinks(){
-    VendingService.drinks()
+    vendingService.drinks()
   }
 
 }
