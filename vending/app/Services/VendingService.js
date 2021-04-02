@@ -18,13 +18,13 @@ class VendingsService {
     }else{
       window.alert("Purchase failed")
     }
-    }
+    
   }
 
 
-addMoney(){
-  ProxyState.money += .25
-  console.log(ProxyState.money)
+    addMoney(){
+      ProxyState.money += .25
+      console.log(ProxyState.money)
 }
 
 export const vendingService = new VendingService();
