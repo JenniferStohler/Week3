@@ -11,11 +11,13 @@ class AppState extends EventEmitter {
   values = []
   // The below adds intellesense for this property to be used as type Enemy
   /** @type {Chips} */
+}
     
 import Chips from "./Models/Chips.js"
 import Value from "./Models/Value.js"
 import { EventEmitter } from "./Utils/EventEmitter.js"
 import { isValidProp } from "./Utils/isValidProp.js"
+
 
 // all data for entire application exits within this object
 class AppState extends EventEmitter {

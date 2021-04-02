@@ -1,5 +1,5 @@
 
-//import { ProxyState } from "../Models/AppState.js"
+import { ProxyState } from "../Utils/AppState.js"
 
 class VendingService {
   chips(price){
@@ -7,6 +7,8 @@ class VendingService {
   if(ProxyState.chips.price < 0){
     ProxyState.chips.price = 0
   }
+
+  ProxyState.chips = ProxyState.chips
   
   }
   candy(price){

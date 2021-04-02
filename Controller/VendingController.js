@@ -35,10 +35,12 @@ export default class VendingController {
   }
 
   candy(){
+    console.log('buying candy')
     vendingService.candy()
   }
 
   drinks(){
+    console.log('buying drinks')
     vendingService.drinks()
   }
 
